@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			div.clickEffect{
+				position: fixed;
+				box-sizing: border-box;
+				border-style: solid;
+				border-color: #ffffff;
+				border-radius: 50%;
+				animation: clickEffect 0.4s ease-out;
+				z-index: 5;
+			}
+		@keyframes clickEffect{
+			0%{
+				opacity: 1;
+				width: 0.5em; height: 0.5em;
+				margin: -0.25em;
+				border-width: 0.5rem;
+			}
+			100%{
+				opacity: 0.2;
+				width: 15em; height: 15em;
+				margin: -7.5em;
+				border-width: 0.03rem;
+			}
+		}
+	</style>
+		<meta charset="utf-8">
+		<title>REPEN</title>
+
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+		<script type="text/javascript">
+			window.onload = function() {
+				var unknown1 = document.getElementsByClassName("unknown-name");
+				var unknown2 = document.getElementsByClassName("unknown-last");
+				var unknown3 = document.getElementsByClassName("unknown-age");
+				var audio = new Audio("noise1.wav");
+				var glitch = document.getElementById("glitch");
+				unknown1[0].onclick = function() {
+					glitch.classList.remove("hidden");
+					setTimeout(() => glitch.classList.add("hidden"), 300);
+					audio.play();
+				}
+
+				unknown2[0].onclick = function() {
+					glitch.classList.remove("hidden");
+					setTimeout(() => glitch.classList.add("hidden"), 300);
+					audio.play();
+				}
+
+				unknown3[0].onclick = function() {
+					glitch.classList.remove("hidden");
+					setTimeout(() => glitch.classList.add("hidden"), 300);
+					audio.play();
+				}
+			}
+		</script>
+	</head>
+
+	<link rel="stylesheet" href="style.css" media="screen">
+	<script type="text/javascript" src="repen.js"></script>
+
+	<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+
+		<div class="application-container">
+				<ul class="slider">
+						<li class="item hidden"><img class="story" src="repen-1.png" alt="Story"></li>
+						<li class="item hidden"><img class="story" src="repen-2.png" alt="Story"></li>
+				</ul>
+		</div>
+
+		<section id="glitch" class="hidden"></section>
+		<section id="error" class="hidden"></section>
+		<div id="snow"></div>
+
+		<div id="name-modal" class="hidden">
+    	<div class="modal-header">
+      	<p class="name-content">WHO ARE YOU?</p>
+    	</div>
+
+    	<div class="modal-body">
+        <label for="title-text-input">I am... </label>
+				<input type="text" id="inputarea" class="input" maxlength = "10">
+    	</div>
+
+    	<div class="modal-footer">
+      	<button onclick="input()" type="button" id="name-button-accept" class="modal-button">Done</button>
+      	<button onclick="shutdown()" type="button" class="modal-button cancel-button">Cancel</button>
+
+				<script>
+				function shutdown() {
+					var nameModal = document.getElementById("name-modal");
+					nameModal.classList.add("hidden")
+				}
+				</script>
+
+    	</div>
+  	</div>
+
+		<header>
+			<a href="#">
+				<h1 class="site-title">
+					REPEN
+				</h1>
+			</a>
+		</header>
+
+		<div class="music-player">
+			<audio src="Journey-from-a-Jar-to-the-Sky.mp3" autoplay controls loop />
+		</div>
+
+		<button onclick="cancelprofile()" class="cancel-profile hidden" type="button">Cancel</button>
+
+		<main>
+			<article id="id-card">
+
+				<div id="id-card">
+					<img class="id-photo" src="Repen.png" alt="Repen">
+					<ul class="card-contents">
+						<li class="subtitle">Temporary Name</li>
+							<li class="contents">Repen</li>
+						<li class="subtitle">First Name</li>
+							<li id="unknown" class="unknown-name">@*(^$(@*!#))</li>
+						<li class="subtitle">Last Name</li>
+							<li id="unknown" class="unknown-last">@*(^$(@*!#))</li>
+						<li class="subtitle">Gender</li>
+							<li class="contents">Male</li>
+						<li class="subtitle">Age</li>
+							<li id="unknown" class="unknown-age">@*(^$(@*!#))</li>
+					</ul>
+				</div>
+
+				<div class="button-container">
+						<button onclick="showProfile()" class="menu-button" type="button"><p>Profile</p></button>
+						<button onclick="showETC()" class="menu-button" type="button"><p>ETC</p></button>
+						<button onclick="showPhoto()" class="menu-button" type="button"><p>Items</p></button>
+						<button onclick="showPhoto()" class="menu-button" type="button"><p>Docs</p></button>
+
+						<script>
+
+						function showProfile() {
+							var audio = new Audio("page.wav");
+							var btn = document.getElementsByClassName("cancel-profile");
+							var item = document.getElementsByClassName("item");
+							audio.play();
+							item[0].classList.remove("hidden");
+							btn[0].classList.remove("hidden");
+        		}
+
+						function cancelprofile() {
+							var item = document.getElementsByClassName("item");
+							var btn = document.getElementsByClassName("cancel-profile");
+							item[0].classList.add("hidden");
+							item[1].classList.add("hidden");
+							btn[0].classList.add("hidden");
+						}
+
+						function showETC() {
+							var audio = new Audio("page.wav");
+							var btn = document.getElementsByClassName("cancel-profile");
+							var item = document.getElementsByClassName("item");
+
+							audio.play();
+							item[1].classList.remove("hidden");
+							btn[0].classList.remove("hidden");
+						}
+
+						</script>
+				</div>
+
+				<!-- <button onclick="location.href='repentance.html'" class="namebox" type="button">I know who I am</button> -->
+				<button onclick="prompt()" class="namebox" type="button">I know who I am</button>
+
+				<script>
+				function prompt() {
+					var nameModal = document.getElementById("name-modal");
+					nameModal.classList.remove("hidden");
+				}
+				</script>
+
+				<script>
+				function input() {
+					var temp = document.getElementById('inputarea').value;
+					var glitch = document.getElementById("glitch");
+					var error = document.getElementById('error')
+					var audio = new Audio("noise1.wav");
+					var audio2 = new Audio("error.wav");
+					if (temp == "Ben Ider") {
+						glitch.classList.remove("hidden");
+						setTimeout(() => glitch.classList.add("hidden"), 300);
+						audio.play();
+						setTimeout(() => location.replace("repentance.html"), 300);
+					}
+					else if (temp == "Ben") {
+						glitch.classList.remove("hidden");
+						setTimeout(() => glitch.classList.add("hidden"), 300);
+						audio.play();
+						setTimeout(() => location.replace("repentance.html"), 300);
+					}
+					else if (temp == "a creature") {
+						glitch.classList.remove("hidden");
+						setTimeout(() => glitch.classList.add("hidden"), 300);
+						audio.play();
+						setTimeout(() => location.replace("creature.html"), 300);
+					}
+					else if (temp == "creature") {
+						glitch.classList.remove("hidden");
+						setTimeout(() => glitch.classList.add("hidden"), 300);
+						audio.play();
+						setTimeout(() => location.replace("creature.html"), 300);
+					}
+					else {
+						error.classList.remove("hidden");
+						setTimeout(() => error.classList.add("hidden"), 300);
+						audio2.play();
+					}
+				}
+				</script>
+
+			</article>
+		</main>
+
+	</body>
+
+</html>

@@ -1,0 +1,315 @@
+* {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  cursor: url(cursor2.cur), auto;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  background: linear-gradient(180deg, rgba(255, 218, 196,1) 0%, rgba(40,37,38,1) 100%);
+  animation-duration: 0.01s;
+  animation-name: textflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+section:before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-image: url("glitch.jpg");
+  background-size:100%;
+  opacity:.5;
+  mix-blend-mode:hard-light;
+  animation:animate .2s linear infinite;
+}
+
+@keyframes animate{
+  0%{
+  background-position: 0 0;
+  filter:hue-rotate(0deg);
+  }
+  10%{
+  background-position: 5px 0;
+  }
+  20%{
+  background-position: -5px 0;
+  }
+  30%{
+  background-position: 15px 0;
+  }
+  40%{
+  background-position: 5px 0;
+  }
+  50%{
+  background-position: -25px 0;
+  }
+  60%{
+  background-position: -50px 0;
+  }
+  70%{
+  background-position: 0 -20px;
+  }
+  80%{
+  background-position: -60px -20px;
+  }
+  81%{
+  background-position: 0 0;
+  }
+  100%{
+  background-position: 0 0;
+  filter:hue-rotate(360deg);
+  }
+}
+
+a:visited, a:hover, a:link {
+  font-size: 30px;
+  color: white;
+}
+
+.site-title {
+  position: absolute; left: 50%; top: 2%;
+  transform: translate(-50%, 10%);
+  animation-duration: 0.01s;
+  animation-name: textflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.music-player {
+  position: absolute; left: 50%; top: 20%;
+  transform: translate(-50%, 20%);
+}
+
+audio {
+  height: 30px;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+.menu-container {
+  z-index: 3;
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: absolute; left: 92%; top: 50%;
+  transform: translate(-14%, -50%);
+  z-index: 1;
+}
+
+@keyframes movement {
+  100% {
+    transform: translate(50px);
+  }
+}
+
+@keyframes photo-movement {
+  0% {
+    transform: translate(-80%, -58%);
+  }
+  100% {
+    transform: translate(-90%, -58%);
+  }
+}
+
+@keyframes back-movement {
+  100% {
+    transform: translate(-80%, -58%);
+  }
+}
+
+@keyframes textflicker {
+  from {
+    text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+  }
+  to {
+    text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+  }
+}
+
+.menu-button {
+  background-color: rgb(247, 143, 148);
+  border: none;
+  border-radius: 5px;
+  text-align: left;
+  width: 80px;
+  height: 45px;
+  margin: 0px 0px 10px 0px;
+  font-size: 15px;
+  font-style: italic;
+  box-shadow: 0px 0px 8px rgb(34, 34, 34);
+}
+
+.namebox {
+  background-color: black;
+  color: rgb(144, 137, 148);
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  width: 150px;
+  height: 30px;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: bold;
+  z-index: 100;
+  position: absolute; left: 50%; top: 110%;
+  transform: translate(-50%, 0%);
+  box-shadow: 0px 0px 8px rgb(34, 34, 34);
+}
+
+.namebox:hover {
+  background-color: white;
+  color: black;
+  transition-duration: 0.5s;
+}
+
+#snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.real-menu-button {
+  background-color: rgb(98, 19, 19);
+  border: none;
+  border-radius: 5px;
+  text-align: left;
+  width: 80px;
+  height: 45px;
+  margin: 0px 0px 10px 0px;
+  font-size: 15px;
+  font-style: italic;
+  box-shadow: 0px 0px 8px rgb(34, 34, 34);
+}
+
+.real-menu-button:hover {
+  background-color: rgb(229, 218, 219);
+  transition-duration: 0.5s;
+  animation: movement 1s forwards;
+}
+
+.real-menu-button:active {
+  background-color: rgb(122, 125, 137);
+  transition-duration: 0.3s;
+}
+
+.real-menu-button:focus {
+  color: white;
+  background-color: rgb(122, 125, 137);
+  transform: translate(50px);
+}
+
+.menu-button:hover {
+  background-color: rgb(229, 218, 219);
+  transition-duration: 0.5s;
+  animation: movement 1s forwards;
+}
+
+.menu-button:active {
+  background-color: rgb(122, 125, 137);
+  transition-duration: 0.3s;
+}
+
+.menu-button:focus {
+  color: white;
+  background-color: rgb(122, 125, 137);
+  transform: translate(50px);
+}
+
+.id-photo {
+  position: absolute; left: 30%; top: 50%;
+  transform: translate(-65%, -50%);
+}
+
+.card-contents {
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-20%, -58%);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.subtitle {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.contents {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.photo {
+  background-color: transparent;
+  box-shadow: 9px 0px 10px rgb(34, 34, 34);
+  border: none;
+  position: absolute; left: 30%; top: 50%;
+  transform: translate(-80%, -58%);
+  background-image: url("photo.png");
+  background-size: cover;
+  z-index: 0;
+  width: 250px;
+  height: 200px;
+  border-radius: 5px;
+  animation: back-movement 1s forwards;
+}
+
+.photo:hover {
+  transition-duration: 4s;
+  animation: photo-movement 1s forwards;
+}
+
+.photo:focus {
+  transform: translate(-90%, -58%);
+}
+
+#fade-in-box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 8;
+  background-size: cover;
+}
+
+#glitch {
+  width: 100%;
+  height: 100%;
+  background-image: url("glitch.jpg");
+  position: absolute;
+  z-index: 8;
+  background-size: cover;
+}
+
+#real-id-card {
+  background-image: url("idcard.png");
+  background-size: cover;
+  border: none;
+  box-shadow: 0px 0px 8px rgb(34, 34, 34);
+  width: 500px;
+  height: 280px;
+  border-radius: 15px;
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}

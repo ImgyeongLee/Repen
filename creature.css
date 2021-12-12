@@ -1,0 +1,255 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  background: rgb(24,23,26);
+  cursor: url(cursor2.cur), auto;
+}
+
+.light {
+  position: absolute; left: 52%; top: 10%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 80px #f0f,
+    inset -20px 0 80px #0ff,
+    inset 20px 0 300px #f0f,
+    inset -20px 0 300px #0ff,
+    0 0 50px #fff,
+    -10px 0 80px #f0f,
+    10px 0 80px #0ff;
+}
+
+.hidden {
+  display: none;
+}
+
+#body {
+  position: absolute; left: 45%; top: 80%;
+  transform: translate(-33%, 85%);
+  width: 300px;
+  height: 225px;
+  background-image: url("eye.png");
+  background-size: cover;
+  z-index: 1;
+}
+
+#hand-container {
+  position: absolute; left: 48%; top: 8%;
+}
+
+#arm1 {
+  position: absolute; left: 50%; top: 20%;
+  width: 100px;
+  height: 600px;
+  background-color: transparent;
+  animation: spin1 2.5s linear infinite;
+}
+
+#arm2 {
+  position: absolute; left: 50%; top: 10%;
+  transform: rotate(45deg);
+  width: 100px;
+  height: 600px;
+  background-color: transparent;
+  animation: spin2 2.5s linear infinite;
+}
+
+#arm3 {
+  position: absolute; left: 50%; top: 10%;
+  transform: rotate(90deg);
+  width: 100px;
+  height: 600px;
+  background-color: transparent;
+  animation: spin3 2.5s linear infinite;
+}
+
+#arm4 {
+  position: absolute; left: 50%; top: 10%;
+  transform: rotate(135deg);
+  width: 100px;
+  height: 600px;
+  background-color: transparent;
+  animation: spin4 2.5s linear infinite;
+}
+
+#arm5 {
+  position: absolute; left: 50%; top: 10%;
+  transform: rotate(180deg);
+  width: 100px;
+  height: 600px;
+  background-color: transparent;
+  animation: spin5 2.5s linear infinite;
+}
+
+#arm6 {
+  position: absolute; left: 50%; top: 10%;
+  transform: rotate(225deg);
+  width: 100px;
+  height: 600px;
+  background-color: transparent;
+  animation: spin6 2.5s linear infinite;
+}
+
+#arm7 {
+  position: absolute; left: 50%; top: 10%;
+  transform: rotate(270deg);
+  width: 100px;
+  height: 600px;
+  background-color: transparent;
+  animation: spin7 2.5s linear infinite;
+}
+
+#arm8 {
+  position: absolute; left: 50%; top: 10%;
+  transform: rotate(315deg);
+  width: 100px;
+  height: 600px;
+  background-color: transparent;
+  animation: spin8 2.5s linear infinite;
+}
+
+#hand {
+  width: 150px;
+  height: 96px;
+  background-image: url("hand.png");
+  background-size: cover;
+  z-index: 10;
+}
+
+#error {
+  width: 100%;
+  height: 100%;
+  background-image: url("error.png");
+  position: absolute;
+  z-index: 9;
+  background-size: cover;
+}
+
+
+@keyframes spin1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin2 {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+
+@keyframes spin3 {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(450deg);
+  }
+}
+
+@keyframes spin4 {
+  0% {
+    transform: rotate(135deg);
+  }
+  100% {
+    transform: rotate(495deg);
+  }
+}
+
+@keyframes spin5 {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(540deg);
+  }
+}
+
+@keyframes spin6 {
+  0% {
+    transform: rotate(225deg);
+  }
+  100% {
+    transform: rotate(585deg);
+  }
+}
+
+@keyframes spin7 {
+  0% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(630deg);
+  }
+}
+
+@keyframes spin8 {
+  0% {
+    transform: rotate(315deg);
+  }
+  100% {
+    transform: rotate(675deg);
+  }
+}
+
+section:before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-image: url("glitch.jpg");
+  background-size:100%;
+  opacity:.5;
+  mix-blend-mode:hard-light;
+  animation:animate .2s linear infinite;
+}
+
+@keyframes animate{
+  0%{
+  background-position: 0 0;
+  filter:hue-rotate(0deg);
+  }
+  10%{
+  background-position: 5px 0;
+  }
+  20%{
+  background-position: -5px 0;
+  }
+  30%{
+  background-position: 15px 0;
+  }
+  40%{
+  background-position: 5px 0;
+  }
+  50%{
+  background-position: -25px 0;
+  }
+  60%{
+  background-position: -50px 0;
+  }
+  70%{
+  background-position: 0 -20px;
+  }
+  80%{
+  background-position: -60px -20px;
+  }
+  81%{
+  background-position: 0 0;
+  }
+  100%{
+  background-position: 0 0;
+  filter:hue-rotate(360deg);
+  }
+}

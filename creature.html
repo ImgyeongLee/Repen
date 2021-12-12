@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <style type="text/css">
+			div.clickEffect{
+				position: fixed;
+				box-sizing: border-box;
+				border-style: solid;
+				border-color: white;
+				border-radius: 50%;
+				animation: clickEffect 0.4s ease-out;
+				z-index: 5;
+			}
+		@keyframes clickEffect{
+			0%{
+				opacity: 1;
+				width: 0.5em; height: 0.5em;
+				margin: -0.25em;
+				border-width: 0.5rem;
+			}
+			100%{
+				opacity: 0.2;
+				width: 15em; height: 15em;
+				margin: -7.5em;
+				border-width: 0.03rem;
+			}
+		}
+	</style>
+		<meta charset="utf-8">
+		<title>CREATURE</title>
+
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+			window.onload = function() {
+				var creature = document.getElementById("body");
+				var audio = new Audio("error.wav");
+				var error = document.getElementById("error");
+				creature.onclick = function() {
+          alert("Why are you here?");
+          alert("Go. Right now.");
+					error.classList.remove("hidden");
+          audio.play();
+          setTimeout ('window.close()', 1000)
+				}
+			}
+		</script>
+
+	</head>
+
+	<link rel="stylesheet" href="creature.css" media="screen">
+	<script type="text/javascript" src="repen.js"></script>
+
+	<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+    <section id="error" class="hidden"></section>
+    <div id="snow"></div>
+		<main>
+      <div class="light"></div>
+      <div id="hand-container">
+        <div id="body"></div>
+        <div id="arm1">
+          <div id="hand"></div>
+        </div>
+        <div id="arm2">
+          <div id="hand"></div>
+        </div>
+        <div id="arm3">
+          <div id="hand"></div>
+        </div>
+        <div id="arm4">
+          <div id="hand"></div>
+        </div>
+        <div id="arm5">
+          <div id="hand"></div>
+        </div>
+        <div id="arm6">
+          <div id="hand"></div>
+        </div>
+        <div id="arm7">
+          <div id="hand"></div>
+        </div>
+        <div id="arm8">
+          <div id="hand"></div>
+        </div>
+      </div>
+
+		</main>
+	</body>
+
+</html>
