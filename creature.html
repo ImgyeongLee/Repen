@@ -33,14 +33,14 @@
     <script type="text/javascript">
 			window.onload = function() {
 				var creature = document.getElementById("body");
-				var audio = new Audio("error.wav");
+				var audio = new Audio("buzzer.mp3");
 				var error = document.getElementById("error");
 				creature.onclick = function() {
-          alert("Why are you here?");
-          alert("Go. Right now.");
+          alert("Remember me when you come into your kingdom.");
 					error.classList.remove("hidden");
           audio.play();
-          setTimeout ('window.close()', 1000)
+					setTimeout(() => location.replace("index.html"), 1000);
+          <!--setTimeout ('window.top.close()', 1000)-->
 				}
 			}
 		</script>

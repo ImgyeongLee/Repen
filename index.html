@@ -67,6 +67,7 @@
 				<ul class="slider">
 						<li class="item hidden"><img class="story" src="repen-1.png" alt="Story"></li>
 						<li class="item hidden"><img class="story" src="repen-2.png" alt="Story"></li>
+						<li class="item hidden"><img class="story" src="repen-3.png" alt="Story"></li>
 				</ul>
 		</div>
 
@@ -134,8 +135,8 @@
 				<div class="button-container">
 						<button onclick="showProfile()" class="menu-button" type="button"><p>Profile</p></button>
 						<button onclick="showETC()" class="menu-button" type="button"><p>ETC</p></button>
-						<button onclick="showPhoto()" class="menu-button" type="button"><p>Items</p></button>
-						<button onclick="showPhoto()" class="menu-button" type="button"><p>Docs</p></button>
+						<button onclick="itemopen()" class="menu-button" type="button"><p>Items</p></button>
+						<button onclick="window.open('https://docs.google.com/document/d/1ZY5ekUiC1nUEgSiRgkn5TvhKOn5_vqIOm-c7farIn10/edit?usp=sharing')" class="menu-button" type="button"><p>Docs</p></button>
 
 						<script>
 
@@ -153,6 +154,7 @@
 							var btn = document.getElementsByClassName("cancel-profile");
 							item[0].classList.add("hidden");
 							item[1].classList.add("hidden");
+							item[2].classList.add("hidden");
 							btn[0].classList.add("hidden");
 						}
 
@@ -163,6 +165,20 @@
 
 							audio.play();
 							item[1].classList.remove("hidden");
+							btn[0].classList.remove("hidden");
+						}
+
+						function itemopen() {
+							var audio = new Audio("bag.wav");
+							audio.play();
+							setTimeout(() => showItem(), 500);
+						}
+
+						function showItem() {
+							var btn = document.getElementsByClassName("cancel-profile");
+							var item = document.getElementsByClassName("item");
+
+							item[2].classList.remove("hidden");
 							btn[0].classList.remove("hidden");
 						}
 
@@ -186,7 +202,19 @@
 					var error = document.getElementById('error')
 					var audio = new Audio("noise1.wav");
 					var audio2 = new Audio("error.wav");
-					if (temp == "a creature") {
+					if (temp == "Ben Ider") {
+						glitch.classList.remove("hidden");
+						setTimeout(() => glitch.classList.add("hidden"), 300);
+						audio.play();
+						setTimeout(() => location.replace("repentance.html"), 300);
+					}
+					else if (temp == "Ben") {
+						glitch.classList.remove("hidden");
+						setTimeout(() => glitch.classList.add("hidden"), 300);
+						audio.play();
+						setTimeout(() => location.replace("repentance.html"), 300);
+					}
+					else if (temp == "a creature") {
 						glitch.classList.remove("hidden");
 						setTimeout(() => glitch.classList.add("hidden"), 300);
 						audio.play();
