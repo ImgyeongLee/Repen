@@ -197,18 +197,13 @@
 
 				<script>
 				function input() {
+					var nameModal = document.getElementById("name-modal");
 					var temp = document.getElementById('inputarea').value;
 					var glitch = document.getElementById("glitch");
 					var error = document.getElementById('error')
 					var audio = new Audio("noise1.wav");
 					var audio2 = new Audio("error.wav");
 					if (temp == "Ben Ider") {
-						glitch.classList.remove("hidden");
-						setTimeout(() => glitch.classList.add("hidden"), 300);
-						audio.play();
-						setTimeout(() => location.replace("repentance.html"), 300);
-					}
-					else if (temp == "Ben") {
 						glitch.classList.remove("hidden");
 						setTimeout(() => glitch.classList.add("hidden"), 300);
 						audio.play();
@@ -225,6 +220,15 @@
 						setTimeout(() => glitch.classList.add("hidden"), 300);
 						audio.play();
 						setTimeout(() => location.replace("creature.html"), 300);
+					}
+					else if (temp == "Bellen") {
+						alert("Repent of your sins.");
+						glitch.classList.remove("hidden");
+						setTimeout(() => glitch.classList.add("hidden"), 300);
+						audio.play();
+						setTimeout(() => window.open('https://youtu.be/z-JBbVx3y5w'), 300);
+						document.getElementById('inputarea').value = '';
+						nameModal.classList.add("hidden");
 					}
 					else {
 						error.classList.remove("hidden");
