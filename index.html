@@ -108,7 +108,7 @@
 		</header>
 
 		<div class="music-player">
-			<audio src="Journey-from-a-Jar-to-the-Sky.mp3" autoplay controls loop />
+			<audio id= "bgm" src="Journey-from-a-Jar-to-the-Sky.mp3" autoplay controls loop />
 		</div>
 
 		<button onclick="cancelprofile()" class="cancel-profile hidden" type="button">Cancel</button>
@@ -203,6 +203,7 @@
 					var error = document.getElementById('error')
 					var audio = new Audio("noise1.wav");
 					var audio2 = new Audio("error.wav");
+					var bgm = document.getElementById('bgm');
 					if (temp == "Ben Ider") {
 						glitch.classList.remove("hidden");
 						setTimeout(() => glitch.classList.add("hidden"), 300);
@@ -229,6 +230,7 @@
 						setTimeout(() => window.open('https://youtu.be/z-JBbVx3y5w'), 300);
 						document.getElementById('inputarea').value = '';
 						nameModal.classList.add("hidden");
+						bgm.pause();
 					}
 					else {
 						error.classList.remove("hidden");
