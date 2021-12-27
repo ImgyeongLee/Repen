@@ -210,6 +210,12 @@
 						audio.play();
 						setTimeout(() => location.replace("repentance.html"), 300);
 					}
+					else if (temp == "Ben") {
+						glitch.classList.remove("hidden");
+						setTimeout(() => glitch.classList.add("hidden"), 300);
+						audio.play();
+						setTimeout(() => location.replace("repentance.html"), 300);
+					}
 					else if (temp == "a creature") {
 						glitch.classList.remove("hidden");
 						setTimeout(() => glitch.classList.add("hidden"), 300);
@@ -228,6 +234,19 @@
 						setTimeout(() => glitch.classList.add("hidden"), 300);
 						audio.play();
 						setTimeout(() => window.open('https://youtu.be/z-JBbVx3y5w'), 300);
+						document.getElementById('inputarea').value = '';
+						nameModal.classList.add("hidden");
+						bgm.pause();
+					}
+					else if (temp == "voice") {
+						alert("Just close your eyes.");
+						alert("You'll be alright.");
+						alert("Come morning light.");
+						alert("You and I'll be safe and sound.");
+						glitch.classList.remove("hidden");
+						setTimeout(() => glitch.classList.add("hidden"), 300);
+						audio.play();
+						setTimeout(() => window.open('https://youtu.be/N6IQt9E3v84'), 300);
 						document.getElementById('inputarea').value = '';
 						nameModal.classList.add("hidden");
 						bgm.pause();
