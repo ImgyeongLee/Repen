@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			div.clickEffect{
+				position: fixed;
+				box-sizing: border-box;
+				border-style: solid;
+				border-color: black;
+				border-radius: 50%;
+				animation: clickEffect 0.4s ease-out;
+				z-index: 5;
+			}
+		@keyframes clickEffect{
+			0%{
+				opacity: 1;
+				width: 0.5em; height: 0.5em;
+				margin: -0.25em;
+				border-width: 0.5rem;
+			}
+			100%{
+				opacity: 0.2;
+				width: 15em; height: 15em;
+				margin: -7.5em;
+				border-width: 0.03rem;
+			}
+		}
+	</style>
+		<meta charset="utf-8">
+		<title>REPEN</title>
+
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+
+	</head>
+
+	<link rel="stylesheet" href="style2.css" media="screen">
+	<script type="text/javascript" src="repen.js"></script>
+
+	<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+
+		<div class="application-container">
+				<ul class="slider">
+						<li class="item hidden"><img class="story" src="ben-profile.png" alt="Story"></li>
+				</ul>
+		</div>
+
+		<section id="glitch" class="hidden"></section>
+		<div id="snow"></div>
+
+		<header>
+			<a href="#">
+				<h1 class="site-title">
+					REPENTANCE
+				</h1>
+			</a>
+		</header>
+
+		<div class="music-player">
+			<audio src="The-Catheral.mp3" autoplay controls loop />
+		</div>
+
+		<button onclick="cancelprofile()" class="cancel-profile hidden" type="button">Cancel</button>
+
+		<main>
+			<article id="real-id-card">
+
+				<div id="real-id-card">
+					<img class="id-photo" src="Ben.png" alt="Repen">
+					<ul class="card-contents">
+						<li class="subtitle">Temporary Name</li>
+							<li class="contents">Repen</li>
+						<li class="subtitle">First Name</li>
+							<li class="contents">Ben</li>
+						<li class="subtitle">Last Name</li>
+							<li class="contents">Ider</li>
+						<li class="subtitle">Gender</li>
+							<li class="contents">Male</li>
+						<li class="subtitle">Age</li>
+							<li class="contents">25</li>
+					</ul>
+				</div>
+
+				<div class="button-container">
+					<button onclick="showProfile()" class="real-menu-button" type="button"><p>Profile</p></button>
+					<button onclick="window.open('https://malangdeepbread.postype.com/post/11453789')" class="real-menu-button" type="button"><p>Past</p></button>
+					<button onclick="window.open('https://malangdeepbread.postype.com/post/11454117')" class="real-menu-button" type="button"><p>Dream</p></button>
+					<button class="real-menu-button" type="button"><p>???</p></button>
+				</div>
+
+        <div class="photo-container">
+          <button onclick="showPhoto()" class="photo hidden" type="button"></button>
+
+					<script>
+					function showProfile() {
+						var audio = new Audio("page.wav");
+						var btn = document.getElementsByClassName("cancel-profile");
+						var item = document.getElementsByClassName("item");
+						audio.play();
+						item[0].classList.remove("hidden");
+						btn[0].classList.remove("hidden");
+					}
+
+					function cancelprofile() {
+						var item = document.getElementsByClassName("item");
+						var btn = document.getElementsByClassName("cancel-profile");
+						item[0].classList.add("hidden");
+						btn[0].classList.add("hidden");
+					}
+					</script>
+        </div>
+
+				<button onclick="goback()"class="namebox" type="button">Back</button>
+
+				<script>
+				function prompt() {
+					var nameModal = document.getElementById("name-modal");
+					nameModal.classList.remove("hidden");
+				}
+				</script>
+
+				<script>
+				function goback() {
+					var glitch = document.getElementById("glitch");
+					var audio = new Audio("noise1.wav");
+					glitch.classList.remove("hidden");
+					setTimeout(() => glitch.classList.add("hidden"), 300);
+					audio.play();
+					setTimeout(() => location.replace("index.html"), 300);
+				}
+				</script>
+
+			</article>
+		</main>
+
+	</body>
+
+</html>

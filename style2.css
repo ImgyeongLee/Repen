@@ -179,6 +179,20 @@ audio::-webkit-media-controls-panel {
   transition-duration: 0.5s;
 }
 
+.btn{
+    font-size: 50px;
+}
+.prev{
+    position:absolute;
+    top:30%;
+    left:0;
+}
+.next{
+    position:absolute;
+    top:30%;
+    right:0%;
+}
+
 #snow {
     position: fixed;
     top: 0;
@@ -187,6 +201,38 @@ audio::-webkit-media-controls-panel {
     bottom: 0;
     pointer-events: none;
     z-index: 1;
+}
+
+.story {
+  width: 1066px;
+  height: 700px;
+}
+
+.slider {
+    position: fixed; bottom: 0; width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    z-index: 9999;
+}
+
+.cancel-profile {
+  z-index: 9999;
+  position: absolute; top: 3%; left: 77%;
+  border: none;
+  border-radius: 3px;
+  width: 80px;
+  height: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: rgb(196, 180, 182);
+  color: black;
+}
+
+.cancel-profile:hover {
+  background-color: black;
+  color: white;
+  transition-duration: 0.3s;
 }
 
 .real-menu-button {
