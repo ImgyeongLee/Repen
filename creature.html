@@ -57,6 +57,7 @@
 		</div>
 
     <section id="error" class="hidden"></section>
+
     <div id="snow"></div>
 		<main>
       <div class="light"></div>
@@ -104,6 +105,7 @@
 					<script>
 					var audio = new Audio("buzzer.mp3");
 					var error = document.getElementById("error");
+					var confession = document.getElementById("confession");
 
 					function shutdown() {
 						var nameModal = document.getElementById("name-modal");
@@ -374,9 +376,20 @@
 		          audio.play();
 							setTimeout(() => location.replace("index.html"), 1000);
 						}
+						else if (temp == "Confession") {
+							if (window.confirm('고해하시겠습니까?')){
+								nameModal.classList.add("hidden");
+								namebox[0].classList.add("hidden");
+								error.classList.remove("hidden");
+			          audio.play();
+								setTimeout(() => location.replace("confession.html"), 1000);
+							}
+							else {
+								alert("당신은 고백하지 않았다.");
+							}
+						}
 						else if (temp == "God") {
-							alert("나는 당신을 한 때 증오했습니다.");
-							alert("그러나 돌고 돌아 결국 당신이군요.");
+							alert(" - 마음속에 생각하고 있는 것이나 감추어 둔 것을 사실대로 숨김없이 말함.");
 						}
 						else {
 							alert("존재하지 않는 수신인");

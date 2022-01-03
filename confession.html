@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <style type="text/css">
+			div.clickEffect{
+				position: fixed;
+				box-sizing: border-box;
+				border-style: solid;
+				border-color: white;
+				border-radius: 50%;
+				animation: clickEffect 0.4s ease-out;
+				z-index: 5;
+			}
+		@keyframes clickEffect{
+			0%{
+				opacity: 1;
+				width: 0.5em; height: 0.5em;
+				margin: -0.25em;
+				border-width: 0.5rem;
+			}
+			100%{
+				opacity: 0.2;
+				width: 15em; height: 15em;
+				margin: -7.5em;
+				border-width: 0.03rem;
+			}
+		}
+	</style>
+		<meta charset="utf-8">
+		<title>CONFESSION</title>
+
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+	</head>
+
+	<link rel="stylesheet" href="creature.css" media="screen">
+	<script type="text/javascript" src="repen.js"></script>
+
+	<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+
+		<div class="music-player">
+			<audio id= "bgm" src="Somber.mp3" autoplay controls loop />
+		</div>
+
+    <section id="error" class="hidden"></section>
+		<section id="confession"></section>
+    <div id="dark" class="hidden"></div>
+		<main>
+			<button onclick="confess()" class="namebox" type="button">Confess my mind</button>
+
+			<script>
+        var audio = new Audio("beep.wav");
+        var error = document.getElementById("error");
+        var dark = document.getElementById("dark");
+
+			function confess() {
+        alert("...");
+        alert("사실, 죽고 싶지 않았어요.");
+        alert("절대로 죽고 싶지 않았어요.");
+        alert("나도 살아서 나가고 싶었어요.");
+        alert("비록 내가 밖에 나간다 하더라도 나는 사형수라 몇 달 뒤 죽어버리겠지만, 그래도 나가고 싶었어요.");
+        alert("남은 생을 정의롭게 보내고 싶었어요.");
+        alert("남은 생을 정말 '나'로 보내고 싶었어요.");
+        alert("남은 생에 꿈을 찾아보고 싶었어요.");
+        alert("남은 생에 풍경 사진을 찍어보고 싶었어요.");
+        alert("남은 생을 영상으로도 담아보고 싶었어요.");
+        alert("남은 생의 앞날을 그려보고 싶었어요. ");
+        alert("남은 생에 신의 사랑을 받고 싶었어요.");
+        alert("남은 생이 잠깐이나마 희망찬 동화같길 바랐어요.");
+        alert("남은 생에 소중했던 이들을 생각하고 싶었어요.");
+        alert("남은 생에 여동생을 기리고 싶었어요.");
+        alert("남은 생을 아름답게 보내고 싶었어요.");
+        alert("남은 생을 속죄하며 살고 싶었어요.");
+        alert("남은 생에 다른 이를 든든하게 해주고 싶었어요.");
+        alert("남은 생을 긍정적으로 살고 싶었어요.");
+        alert("살고 싶었어요.");
+        alert("나의 어머니를 만나 내가 이렇게 값진 사람들을 만났었다고.");
+        alert("내가 그들에게서 이렇게 많은 것을 배우고 왔다고.");
+        alert("이들과 함께하며 조금씩 배운 글로 하늘에 있을, 내가 유일하게 목숨보다 아꼈던 이에게 편지를 날려 보내려고 했어요.");
+        alert("네가 내게 네가 배운 것들을 알려주었으니, 나도 내가 배운 걸 네게 알려주겠다고.");
+        alert("드디어 제대로 된 오빠노릇 좀 하겠네, 라고 실실 웃으면서.");
+        alert("죽음이 두렵지 않다니, 한 치의 거짓이 없다고 할 수 없어요.");
+        alert("나를 조금이라도 사랑할 수 있게 될 거라 생각했는데,");
+        alert("그 미래가 꺾여 나는 내 인생은 충분했다 말할 수 없어요.");
+        alert("이런 내가 미치지 않고서 어떻게 죽음을 두려워하지 않겠어요?");
+        alert("나는 영웅서사의 주인공이 아니라고요.");
+        alert("...아니란 말이에요...");
+
+        dark.classList.remove("hidden");
+        audio.play();
+        setTimeout(() => location.replace("index.html"), 1200);
+			}
+			</script>
+
+		</main>
+	</body>
+
+</html>

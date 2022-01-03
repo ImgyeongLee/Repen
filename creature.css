@@ -210,6 +210,24 @@ audio::-webkit-media-controls-panel {
   background-size: cover;
 }
 
+#dark {
+  width: 100%;
+  height: 100%;
+  background-image: url("dark.png");
+  position: absolute;
+  z-index: 50;
+  background-size: cover;
+}
+
+#confession {
+  width: 100%;
+  height: 100%;
+  background-image: url("church.png");
+  position: absolute;
+  z-index: 9;
+  background-size: cover;
+}
+
 
 @keyframes spin1 {
   0% {
