@@ -6,6 +6,42 @@ html, body {
   cursor: url(cursor2.cur), auto;
 }
 
+.namebox {
+  background-color: black;
+  color: rgb(144, 137, 148);
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  width: 150px;
+  height: 30px;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: bold;
+  z-index: 100;
+  position: absolute; left: 50%; top: 90%;
+  transform: translate(-50%, 0%);
+  box-shadow: 0px 0px 8px rgb(34, 34, 34);
+}
+
+.namebox:hover {
+  background-color: white;
+  color: black;
+  transition-duration: 0.5s;
+}
+
+.music-player {
+  position: absolute; left: 50%; top: 95%;
+  transform: translate(-50%, 20%);
+}
+
+audio {
+  height: 30px;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 .light {
   position: absolute; left: 52%; top: 10%;
   transform: translate(-50%, -50%);
@@ -27,6 +63,40 @@ html, body {
   display: none;
 }
 
+.input {
+  background-color: white;
+  border: none
+}
+
+.input:focus {
+  outline: none;
+}
+
+.modal-body {
+  margin: 10px 10px 10px 10px;
+}
+
+.modal-footer {
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+
+.modal-button {
+  background-color: rgb(221, 215, 215);
+  border: none;
+  border-radius: 3px;
+  transition-duration: 0.3s;
+}
+
+.modal-button:hover {
+  background-color: rgb(123, 112, 114);
+  color: white
+}
+
+.modal-button:active {
+  background-color: black;
+}
+
 #body {
   position: absolute; left: 45%; top: 80%;
   transform: translate(-33%, 85%);
@@ -35,6 +105,17 @@ html, body {
   background-image: url("eye.png");
   background-size: cover;
   z-index: 1;
+}
+
+#name-modal {
+  position: absolute;
+  background-color: rgb(246, 240, 240);
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  text-align: center;
+  z-index: 11;
+  box-shadow: 0px 0px 8px rgb(34, 34, 34);
 }
 
 #hand-container {

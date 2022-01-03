@@ -51,6 +51,11 @@
 	<script type="text/javascript" src="repen.js"></script>
 
 	<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+
+		<div class="music-player">
+			<audio id= "bgm" src="Ever-after.mp3" autoplay controls loop />
+		</div>
+
     <section id="error" class="hidden"></section>
     <div id="snow"></div>
 		<main>
@@ -82,6 +87,314 @@
           <div id="hand"></div>
         </div>
       </div>
+
+			<div id="name-modal" class="hidden">
+	    	<div class="modal-header">
+	      	<p class="name-content">Dear</p>
+	    	</div>
+
+	    	<div class="modal-body">
+					<input type="text" id="inputarea" class="input" maxlength = "15">
+	    	</div>
+
+	    	<div class="modal-footer">
+	      	<button onclick="input()" type="button" id="name-button-accept" class="modal-button">Done</button>
+	      	<button onclick="shutdown()" type="button" class="modal-button cancel-button">Cancel</button>
+
+					<script>
+					var audio = new Audio("buzzer.mp3");
+					var error = document.getElementById("error");
+
+					function shutdown() {
+						var nameModal = document.getElementById("name-modal");
+						nameModal.classList.add("hidden")
+					}
+
+					function input() {
+						var nameModal = document.getElementById("name-modal");
+						var namebox = document.getElementsByClassName("namebox");
+						var temp = document.getElementById('inputarea').value;
+						if (temp == "Elija") {
+							alert("당신은 정의를 추구했던 걸로 기억합니다.");
+							alert("그러니 정의를 어겨버린 나를 쓰레기 취급하지 않을까 걱정했습니다만,");
+							alert("우리가 육신을 떠나고, 당신의 신념에 금이 가면서 다행히 말을 계속 섞을 수있었습니다.");
+							alert("당신이 선물해준 은방울 꽃 한 송이는 내 성경 속에 잠들어 말라가고 있습니다.");
+							alert("신에게 보답받지 못했던 내 자신과 비슷한 것 같기도요.");
+							alert("나는 꽃 한 송이조차 지켜내지 못하네요. 미안합니다.");
+							alert("내 어머니가 꽃밭에서 일을 하셨습니다, 그래서인지 당신이 꽃을 선물해주었을 땐 가슴이 벅차오를만큼 기뻤습니다.");
+							alert("내가 죄가 없었다면 우리는 좀 더 친해질 수 있었을까요? 나로서는 알 수 없군요.");
+							alert("상냥한 당신이여, 내세에는 부디 따스한 정원이 함께하길 바랍니다.");
+							alert("축복을.");
+							nameModal.classList.add("hidden");
+							namebox[0].classList.add("hidden");
+							error.classList.remove("hidden");
+		          audio.play();
+							setTimeout(() => location.replace("index.html"), 1000);
+						}
+						else if (temp == "Vir") {
+							alert("당신은 퍽 책임감이 강했던 사람으로 기억합니다.");
+							alert("종종 당신이 조심스레 내 손을 잡아주며 위로의 말을 건네준 적이 있습니다.");
+							alert("양손에 붕대를 감고 있어서 정말 다행이었다는 생각이 불쑥 들더군요.");
+							alert("겉피부는 전부 타버리고 남는 게 없어 내 양팔은 괴물의 팔처럼 흉측합니다.");
+							alert("그래서 조직에 있는 사람들 중 몇몇은 내 손을 만지기 꺼려했거든요.");
+							alert("이를 전혀 꺼리지 않았던 당신의 상냥함에 크게 감사했습니다.");
+							alert("당신은 소방관이었죠. 불을 내쫓는 그런, 직업이요.");
+							alert("그거 아십니까? 난 당신을 어렸을 적 철없던 시절에 만나지 않아 다행입니다.");
+							alert("어쩌면 당신을 곤란하게 만들었을지도 몰라서요. 그때의 난 여유가 없어 감정적이었으니까요.");
+							alert("내세에는 햇살같은 당신에게 신의 축복이 가득하기를.");
+							nameModal.classList.add("hidden");
+							namebox[0].classList.add("hidden");
+							error.classList.remove("hidden");
+		          audio.play();
+							setTimeout(() => location.replace("index.html"), 1000);
+						}
+						else if (temp == "Philia") {
+							alert("당신은 배우인 것 같은데, 맞나요?");
+							alert("나는 방송을 본 적이 없어 기억을 잃지 않았다한들 당신을 전혀 몰랐을 겁니다.");
+							alert("시간이 갈수록 무기력해보이는 당신을 내심 걱정했습니다.");
+							alert("우리가 깊은 대화를 나누어본 적은 몇 없지만 그래도 당신이 선뜻 내보인 선의는 잘 기억하고 있으니까요.");
+							alert("지금도 생각하는 것이, 당신의 손수건을 거절한 건 잘한 행동이었다는 겁니다.");
+							alert("내 기억이 돌아왔을 때 내 몸에서 피비린내가 나는 듯한 느낌이 들었거든요.");
+							alert("감히 당신의 손수건에 그런 냄새를 배게 할 수는 없는 노릇이죠.");
+							alert("돌아가는 길을 안녕하셨나요, 당신의 수심은 해결이 되었나요.");
+							alert("당신은 당신을 사랑할 수 있게 되었나요.");
+							alert("더 이상의 방황이 없도록 신의 축복이 함께하기를.");
+							nameModal.classList.add("hidden");
+							namebox[0].classList.add("hidden");
+							error.classList.remove("hidden");
+		          audio.play();
+							setTimeout(() => location.replace("index.html"), 1000);
+						}
+						else if (temp == "Iketo") {
+							alert("오...나는 당신을 볼 낯이 없습니다.");
+							alert("이런, 낯이 없다고 하기엔 내가 내 소유의 육신도 없군요. ...말이 그렇다는 겁니다.");
+							alert("내 마지막 기억은 정신이 불안정해보였던 당신에게 위로를 빙자한 오만한 행동을 저지른 일이었습니다.");
+							alert("티를 내진 않았으나, 나는 당신에게 말을 건네며 똑같이 절망했습니다.");
+							alert("내 자신에게서 약간의 매서운 열정이 느껴지기도 했고, 그리움이 느껴지기도 했죠.");
+							alert("꿈을 좇는 사람들이란 나로서는 이해할 수 없습니다. 나는 꿈이 없었으니까요.");
+							alert("열등감이란 게 무슨 느낌이죠? 분노와 무슨 차이죠?");
+							alert("하나부터 열가지 이해할 수 없는 것들을 품고 있던 당신에게 감히 희망을 이야기한 건 사죄드려요.");
+							alert("당신은 내가 저지른 오만을 흘려 들었길 바랍니다. 쓸모가 없으니.");
+							alert("신께서 당신의 앞에 빛을 환하게 비추기를.");
+							nameModal.classList.add("hidden");
+							namebox[0].classList.add("hidden");
+							error.classList.remove("hidden");
+		          audio.play();
+							setTimeout(() => location.replace("index.html"), 1000);
+						}
+						else if (temp == "Vell") {
+							alert("내 살아생전 당신을 제대로 살피지 못한 것이 아쉽습니다.");
+							alert("항상 눈에 밟히긴 했습니다. 그야 우리는 처음 그 괴물과 싸울 때 함께 했잖아요.");
+							alert("당신이 힘들어하는 것을 내 두 눈으로 똑똑히 보았으나 나 또한 그땐 여유가 없었습니다.");
+							alert("나는 미술에 조예가 깊지 않습니다. 여동생을 위해 작은 낙서 몇 개 끄적거린 게 다네요.");
+							alert("기억을 되찾고 바깥으로 돌아간 당신은 전시회를 열었을까요?");
+							alert("전시회 안은 사진 촬영이 안되겠지요?");
+							alert("촬영 허가가 없는 전시회였으면 좋겠군요. 혹시 모르죠, 내가 령이 되어 전시회를 가볼지.");
+							alert("그러다 심령사진이라도 찍히면 안좋은 소리가 붙을 지도 모르잖아요. 그건 싫네요.");
+							alert("농입니다. 갈 수 없겠죠.");
+							alert("하지만 당신의 길이 다채로운 색으로 채워져있기를 바랍니다.");
+							alert("축복을.");
+							nameModal.classList.add("hidden");
+							namebox[0].classList.add("hidden");
+							error.classList.remove("hidden");
+		          audio.play();
+							setTimeout(() => location.replace("index.html"), 1000);
+						}
+						else if (temp == "REC") {
+							alert("제게 있어 당신의 첫인상이 어땠는지 아십니까?");
+							alert("붙임성 있고, 말하는 것을 좋아하는 사람이었습니다.");
+							alert("나는 언제부턴가 사람들에게 말을 제대로 붙이지 못하는 성격이 되었습니다만,");
+							alert("밝게 웃으면서 말을 걸어오는 당신이 참 부럽기도 했고, 존경하기도 했습니다.");
+							alert("나는 살면서 고학력자를 본 적이 거의 없습니다만, 당신은 참 머리가 좋더군요.");
+							alert("아이돌..이라고 하셨나. 사실 아이돌에 관해 아는 것이 하나 없지만 당신은 무얼 해도 잘해낼 것 같아요.");
+							alert("바깥 상황을 잘 몰라서 묻는데, 여전히 그 일에 종사하고 계시나요?");
+							alert("만약 그렇다면 유명해지셨나요? 유명하지 않아도 괜찮습니다.");
+							alert("내가 당신을 알면 됐죠 뭐.");
+							alert("푸딩의 신이 당신과 함께하기를.");
+							alert("...농입니다.");
+							nameModal.classList.add("hidden");
+							namebox[0].classList.add("hidden");
+							error.classList.remove("hidden");
+		          audio.play();
+							setTimeout(() => location.replace("index.html"), 1000);
+						}
+						else if (temp == "Chess") {
+							alert("한 가지 말씀드리겠습니다. 그 히어로 괴물을 처음에 나라고 오해하셨죠.");
+							alert("나 자신이 비록 머리가 좋지 않다고는 해도, 적어도 그 괴물보다는 머리가 좋을 겁니다. 진짜로요.");
+							alert("나를 모욕했다는 이야기는 결단코 아니지만 이거 하나는 꼭 당부드리고 싶었습니다.");
+							alert("나는 첫만남때 당신이 처음에 아주 살짝 불편하게 느껴졌습니다.");
+							alert("내가 몸을 담그고 있던 조직은 나이가 많은 사람들이 대다수입니다. 특히 직급이 높을수록 노인이었죠.");
+							alert("그들은 나를 험하게 다루었기에 나는 연장자들을 대하는 게 익숙할지언정 편안하다고는 볼 수 없었죠.");
+							alert("당신은 달랐습니다. 상냥하고, 조언을 해주며, 나를 걱정해주었습니다.");
+							alert("이런 말을 해도 될지 모르겠지만, 당신과 함께 이야기를 나누면 종종 아버지 생각이 나기도 했습니다.");
+							alert("유언이라 속 시원히 말했습니다. 신의 축복이 함께하기를.");
+							alert("....");
+							alert("...하하, 비숍이 부럽군요.");
+							nameModal.classList.add("hidden");
+							namebox[0].classList.add("hidden");
+							error.classList.remove("hidden");
+		          audio.play();
+							setTimeout(() => location.replace("index.html"), 1000);
+						}
+						else if (temp == "Violet") {
+							alert("당신이 눈을 두려워했던 것으로 아는데, 하필 내가 눈을 내리게 했더군요. 미안해요.");
+							alert("그 괴물에게 납치되고 나 홀로 목숨을 잃었을 때, 당신을 포함한 모두는 끝까지 살아가리라 믿었습니다.");
+							alert("읽은 책은 몇 없지만 보통은 그런 큰 위기를 겪고 나면 해피엔딩이던데.");
+							alert("내가 당신에게 마지막으로 부렸던 오지랖은 도움이 되었을까요.");
+							alert("그 이야기는 사실 내 어머니가 내게 전한 말이었습니다. 나 또한 겨울을 두려워하고 증오했기에.");
+							alert("비록 당신이나 나나 똑같이 숨이 멎어버린 사람들이지만,");
+							alert("어쩐지 당신은 죽었음에도 미래를 그려나갈 수 있을 것 같더군요.");
+							alert("희망을 노래하는 당신이라 그런 걸까요. 하하.");
+							alert("신이 당신의 반만이라도 닮았으면 좋았을텐데.");
+							alert("내세에는 눈물 쏟을 일 없이 행복만이 가득하길.");
+							nameModal.classList.add("hidden");
+							namebox[0].classList.add("hidden");
+							error.classList.remove("hidden");
+		          audio.play();
+							setTimeout(() => location.replace("index.html"), 1000);
+						}
+						else if (temp == "Henry Foster") {
+							alert("하하! 이제 당신의 이름 철자를 정확하게 기억하고 있습니다. d도 안 빼먹었습니다.");
+							alert("살아생전 내가 정신이 나가있었을 때 이야기를 묵묵히 들어줘서 고마웠습니다.");
+							alert("나 또한 도움이 되고 싶긴 했는데...당신이 영 본인 얘길 안했잖습니까. 나 참.");
+							alert("어쩌다보니 형이란 호칭을 붙이게 되었죠. 개인적으로, 아주 솔직히 기쁘긴 했습니다.");
+							alert("형이 있었다면 이런 느낌일까 싶어서요. 허나 의형제를 바라진 않습니다. 과분하고, 부담스러워요.");
+							alert("당신의 친한 친구에게 나를 소개했어도 좋았겠거니...그 또한 최고의 칭찬이었습니다.");
+							alert("나도 이런 살인청부업 말고 군대를 지원할 걸 그랬나봅니다.");
+							alert("어쩌면 좋은 선후배 사이로 만났을지도 모르잖아요. 그건 퍽 괜찮군요, 하하.");
+							alert("내세에는 당신의 소중한 이들이 당신을 떠나는 일이 없기를 바랍니다.");
+							alert("신의 축복을.");
+							nameModal.classList.add("hidden");
+							namebox[0].classList.add("hidden");
+							error.classList.remove("hidden");
+		          audio.play();
+							setTimeout(() => location.replace("index.html"), 1000);
+						}
+						else if (temp == "Glaasia") {
+							alert("버팔로.");
+							alert("...농입니다. 사실 농이 아니기도 합니다. 주먹을 드는 당신의 모습이 절로 상상되는군요.");
+							alert("갑작스럽겠지만 당신은 내게 있어 참 편한 사람입니다.");
+							alert("물론 살아생전 당신이 동생을 찾겠다며 울때는 나도 많이 울컥했습니다.");
+							alert("내가 어려 당신이 순간 밉기도 했어요. 당신 동생은 살아있잖아, 난 아닌데. 이렇게요.");
+							alert("그러나 시간이 지나 내 기억이 안정되고, 마음이 차분해지니 당신을 순간 미워한 내가 밉더군요. 미안해요.");
+							alert("반응이 재밌어서 나도 모르게 놀리고 있다는 것도 있지만...이건 그냥 견디시죠? 친구잖아요.");
+							alert("만약 우리가 살아있었다면 손잡고 사이좋게 감옥으로 들어갔을까요?");
+							alert("그렇담 나는 사형수겠지만 죽기 전까지는 꽤나 삶이 재미있었겠습니다.");
+							alert("내세에도 친구해줘요. 당신보다 덜 부자로 태어날 테니까요.");
+							alert("신의 축복이 당신과 함께하기를.")
+							nameModal.classList.add("hidden");
+							namebox[0].classList.add("hidden");
+							error.classList.remove("hidden");
+		          audio.play();
+							setTimeout(() => location.replace("index.html"), 1000);
+						}
+						else if (temp == "Umbra") {
+							alert("당신은 아름다움에 집착하셨죠.");
+							alert("사람마다 아름다움의 기준이 다르고, 만족하는 정도가 다르기 때문에 섣불리 내가 말을 얹지는 못했지만...");
+							alert("나는 당신이 항상 아름답다고 생각했어요. 맹세코 이 말에는 한 치의 거짓도 없습니다.");
+							alert("당신은 종종 자신이 이기적이라고 이야기를 하시곤 했지만, 나는 잘 모르겠더군요.");
+							alert("내가 굴렀던 곳이 워낙 범죄쪽과 관련이 깊어서 내 기준이 이상할 가능성도 있으나,");
+							alert("적어도 내가 보기엔 당신은 그저 강인하고 생존력이 대단한 사람이었습니다.");
+							alert("나는 그러지 못한 사람이라 당신의 그런 점을 배우고 싶기도 했습니다.");
+							alert("유일하게 바깥에 나가서도 잘 살고 있을 거라는 확신이 강하게 드는 당신이었습니다.");
+							alert("내세에 내가 다시 인간으로 태어난다면 당신의 성격 일부는 꼭 닮고 싶군요, 하하.");
+							alert("아름다운 당신에게 언제나 신의 축복이 있기를.");
+							nameModal.classList.add("hidden");
+							namebox[0].classList.add("hidden");
+							error.classList.remove("hidden");
+		          audio.play();
+							setTimeout(() => location.replace("index.html"), 1000);
+						}
+						else if (temp == "Scar") {
+							alert("나는 당신의 슬픔을 헤아릴 수가 없습니다.");
+							alert("날이 갈수록 묘하게 덤덤해지고 냉정해지던 당신을 보고 걱정이 앞섰습니다.");
+							alert("언제나 바빠 보여 말을 많이 붙이진 못했으나, 죽고난 뒤 당신을 보니 당신은 자주 울고 있더군요.");
+							alert("소문으로 듣자면 귀신은 물건도 집어 던진다고 하던데 나는 그 물건들보다 훨씬 가벼운 눈물조차 만질 수가 없었습니다.");
+							alert("그래서 당신이 혹여 바깥을 나가지 않고 이곳에 머무를까 안절부절해했는데,");
+							alert("나는 당신의 눈물을 보고 나도 모르게 당신을 유약한 사람이라 은연중에 판단했었나봅니다.");
+							alert("마음 속에 있던 응어리들이 다 풀어졌냐고 묻진 않겠습니다.");
+							alert("...바깥 바람은 시원했나요?");
+							alert("그 바람이 당신의 기분을 한결 나아주는 역할이라도 해주었음 합니다.");
+							alert("당신에게 신의 사랑이 함께 하기를 바랍니다.");
+							nameModal.classList.add("hidden");
+							namebox[0].classList.add("hidden");
+							error.classList.remove("hidden");
+		          audio.play();
+							setTimeout(() => location.replace("index.html"), 1000);
+						}
+						else if (temp == "L") {
+							alert("당신은...언제나 든든했죠. 죽도 아닌데 말이에요.");
+							alert("농입니다. 그런 든든한 당신이 있어 나 또한 덩달아 든든해지는 기분을 얻곤 했습니다.");
+							alert("그런데 이전에 당신이 내가 원한다면 말투를 다시 되돌리겠다 어쩌고 했던 건 아직도 조금 속상하군요.");
+							alert("나는 당신을 친구까지는 감히 말하지 못하더라도 적어도 그에 준한다고는 생각했습니다.");
+							alert("명령하라는 듯한 태도는 뭐였나요? 그렇게 따지면 나도 조직에서 핫바리였습니다.");
+							alert("앞으로 당신이 그러한 말을 꺼내는 일이 없기를 바랍니다. 개인적으로요.");
+							alert("...이래저래 일이 많았지만 당신이 무사히 바깥으로 나가게 되어 기뻤습니다.");
+							alert("당신의 속은 내가 잘 알지는 못하나, 묵묵히 제 일을 하는 당신은 분명 밖에서도 잘 살아나가시겠죠.");
+							alert("익숙해져버린 든든함이 떠나니 슬프긴 했지만,");
+							alert("모쪼록 당신에게 신의 축복이 있기를.");
+							nameModal.classList.add("hidden");
+							namebox[0].classList.add("hidden");
+							error.classList.remove("hidden");
+		          audio.play();
+							setTimeout(() => location.replace("index.html"), 1000);
+						}
+						else if (temp == "Hyaebin") {
+							alert("당신의 말에는 농담이 많아 가끔 곤란하곤 했습니다.");
+							alert("싫다는 건 아니었어요. 당신의 말 때문에 내가 실질적으로 피해를 입은 건 없으니까요.");
+							alert("도리어 당신은 내게 위로를 해준 적이 있지요. 당신은 기억할까요?");
+							alert("기억하지 못하시더라도 상관없습니다. 본래 이런 건 받은 이가 더 잘 기억하는 법입니다.");
+							alert("나도 살아생전 주위 사람들에게 긍정적이라는 소리를 많이 듣곤 했지만,");
+							alert("당신이 나보다 더 대단하다고 생각했습니다. 그야 당신은 당신이 힘든 상황에서도 다른 이들을 돌봤으니까.");
+							alert("그 어떤 어려운 일이 있어도 희망을 잃지 않는 걸 보고 존경했어요.");
+							alert("동양에 있는 한 국가의 출신이었죠? 얼핏 보았던 기억으로는 대학생이셨던 것 같았는데...");
+							alert("대학은 당신처럼 강인한 사람들이 들어가는 곳인가요? 무섭네요. ...농입니다.");
+							alert("모쪼록 당신에게 신의 가호가 있기를.");
+							nameModal.classList.add("hidden");
+							namebox[0].classList.add("hidden");
+							error.classList.remove("hidden");
+		          audio.play();
+							setTimeout(() => location.replace("index.html"), 1000);
+						}
+						else if (temp == "Lu") {
+							alert("가장 먼저 떠오르는 말은...역시 그 약에 부작용이 없었어서 다행이네요.");
+							alert("우리의 첫대화가 그런 얘기였던 것 같은데...맞나요? 확신할 수는 없군요. 나는 머리가 좋지 않아서요.");
+							alert("상황이 상황이다보니 당신에게 차마 말하지 못한 게 하나 있습니다.");
+							alert("폐가 되는 게 아니라면 사진 찍는 법을 좀...가르침 받고 싶었어요.");
+							alert("사진기를 다룰 줄은 나도 알긴 알지만 예쁘게 찍을 수 있는 기법 같은 거 말예요.");
+							alert("행복을 느꼈던 순간마다 아름다운 사진을 찍어보고 싶었습니다.");
+							alert("당신이 마지막으로 찍었던 사진에는 우리가 찍혀 있었을까요?");
+							alert("희끄무리하게라도 찍혀 있다면 좋을텐데, 당신이 놀라서 사진을 없애진 않을까 걱정이네요.");
+							alert("장난입니다. 그럴 일은 없겠죠. 당신은 신중하니까요.");
+							alert("부디 그 사진을 소중히 간직해주시길.");
+							alert("축복을.");
+							nameModal.classList.add("hidden");
+							namebox[0].classList.add("hidden");
+							error.classList.remove("hidden");
+		          audio.play();
+							setTimeout(() => location.replace("index.html"), 1000);
+						}
+						else if (temp == "God") {
+							alert("나는 당신을 한 때 증오했습니다.");
+							alert("그러나 돌고 돌아 결국 당신이군요.");
+						}
+						else {
+							alert("존재하지 않는 수신인");
+						}
+					}
+					</script>
+
+	    	</div>
+	  	</div>
+
+			<button onclick="prompt()" class="namebox" type="button">Testament</button>
+
+			<script>
+			function prompt() {
+				var nameModal = document.getElementById("name-modal");
+				nameModal.classList.remove("hidden");
+			}
+			</script>
 
 		</main>
 	</body>
