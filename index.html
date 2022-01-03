@@ -198,6 +198,7 @@
 				<script>
 				function input() {
 					var nameModal = document.getElementById("name-modal");
+					var namebox = document.getElementsByClassName("namebox");
 					var temp = document.getElementById('inputarea').value;
 					var glitch = document.getElementById("glitch");
 					var error = document.getElementById('error')
@@ -250,6 +251,21 @@
 						document.getElementById('inputarea').value = '';
 						nameModal.classList.add("hidden");
 						bgm.pause();
+					}
+					else if (temp == "Lu") {
+						alert("가장 먼저 떠오르는 말은...역시 그 약에 부작용이 없었어서 다행이네요.");
+						alert("우리의 첫대화가 그런 얘기였던 것 같은데...맞나요? 확신할 수는 없군요. 나는 머리가 좋지 않아서요.");
+						alert("상황이 상황이다보니 당신에게 차마 말하지 못한 게 하나 있습니다.");
+						alert("폐가 되는 게 아니라면 사진 찍는 법을 좀...가르침 받고 싶었어요.");
+						alert("사진기를 다룰 줄은 나도 알긴 알지만 예쁘게 찍을 수 있는 기법 같은 거 말예요.");
+						alert("행복을 느꼈던 순간마다 아름다운 사진을 찍어보고 싶었습니다.");
+						alert("당신이 마지막으로 찍었던 사진에는 우리가 찍혀 있었을까요?");
+						alert("희끄무리하게라도 찍혀 있다면 좋을텐데, 당신이 놀라서 사진을 없애진 않을까 걱정이네요.");
+						alert("장난입니다. 그럴 일은 없겠죠. 당신은 신중하니까요.");
+						alert("부디 그 사진을 소중히 간직해주시길.");
+						alert("축복을.");
+						document.getElementById('inputarea').value = '';
+						nameModal.classList.add("hidden");
 					}
 					else {
 						error.classList.remove("hidden");
